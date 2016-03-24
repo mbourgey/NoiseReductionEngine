@@ -213,8 +213,8 @@ Within this period i will keep myself in constant touch with my mentors. This wi
 Week Phase      |            TASK
 ----------------|--------------------------------------
 23 May - 30 May |Model A: Implementation using Algorithm 1 (DBSCAN), evaluating/testing its behavior on the dataset and parameter tuning to get best set of parameters
-31 May - 5 June  | Model A: Implementation using Algorithm 1 (BIRCH), evaluating/testing its behavior on the dataset and parameter tuning to get best set of parameters 
-6 June - 12 June |Model A: Implementation using Algorithm 1 (Manifold Learning), evaluating/testing its behavior on the dataset and parameter tuning to get best set of parameters 
+31 May - 5 June  | Model A: Implementation using Algorithm 2 (BIRCH), evaluating/testing its behavior on the dataset and parameter tuning to get best set of parameters 
+6 June - 12 June |Model A: Implementation using Algorithm 3 (Manifold Learning), evaluating/testing its behavior on the dataset and parameter tuning to get best set of parameters 
 13 June - 19 June |Combining all the 3 algorithms thus achieving Consensus Clustering(Model A), parameter tuning to get best set of parameters
 20 June - 26 June * |Evaluating/Testing Model A based on the evaluation criteria discussed for this model. Thus by this time Model A should be implemented with majority of testing being done
 21 June - 28 June |Mid Term Evaluation 
