@@ -1,8 +1,8 @@
 Project Info
 ---------------
-*Project title:*  Develop a noise reduction engine for SCoNEs
-*Project short title:*  Noise Reduction Engine
-*URL of Project Idea Page: *
+*Project title:* Develop a noise reduction engine for SCoNEs
+*Project short title:* Noise Reduction Engine
+*URL of Project Idea Page:*
 https://bitbucket.org/mugqic/gsoc2016#markdown-header-develop-a-noise-reduction-engine-for-scones
 
  Biographical Information
