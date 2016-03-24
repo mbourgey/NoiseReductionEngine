@@ -14,27 +14,34 @@ I have written more than 15K lines of code in Python and more than 5K lines of c
 
 **Publications**
 
-**User Authentication via Keystroke Timing Pattern** (under review)
-*Principles and Practice of Knowledge Discovery (PKDD), Italy 2016*
+**User Authentication via Keystroke Timing Pattern** 
+*Principles and Practice of Knowledge Discovery (PKDD), Italy 2016* (under review)
 
-**Mining Deceptive Reviewers on Web Forums** (under review) 
-*European Conference on Artificial Intelligence (ECAI), Holland 2016*
+**Mining Deceptive Reviewers on Web Forums**  
+*European Conference on Artificial Intelligence (ECAI), Holland 2016* (under review)
 
 Contact Information
 ---------------------------
 *Student name:* Saket Maheshwary
 
 *Melange Link_id:*
+
 *Student postal address:* 71 Green Avenue, Amritsar, Punjab,India (143001)
+
 *Telephone(s):* +91 8978889210, +91 9779399846
+
 *Email(s):* saketm.1991@gmail.com, saket_1991@yahoo.in
+
 *Other communications channels:* Skype (user id: sakimahesh)
 
 Student Affiliation
 -------------------------
 *Institution:* International Institute of Information Technology, Hyderabad
+
 *Program:* MS by Research in CSE
+
 *Stage of completion:* Second Year
+
 *Contact to verify:* Irshad Bhat (bhatirshad127@gmail.com)
 
 Schedule Conflicts
@@ -44,7 +51,9 @@ There are no commitments from my side regarding other work during summers apart 
 Mentors
 -----------
 *Mentor names:* Mathieu Bourgey and Toby Hocking
+
 *Mentor emails:* mathieu.bourgey@computationalgenomics.ca and toby.hocking@mail.mcgill.ca
+
 *Mentor link_ids:*
 
 I have exchanged multiple emails with my mentors where besides discussing my approach on selection test we also discussed the possible optimizations that can be incorporated, nature of dataset i will be working on during GSoC, discussed on manually labeling some corpus of data set and then generating the label for rest of the unlabeled data using the manually labeled data.
@@ -83,6 +92,7 @@ Thus to get the optimal results for consensus i will be using
             Figure1: Demonstrates Consensus Clustering
             
 **DBSCAN**
+
 DBSCAN is a density based clustering algorithm[1] where given a set of points in some space, it groups together points that are closely packed together (points with many nearby neighbors) thus marking as outliers points that lie alone in low-density regions (points whose nearest neighbors are too far away).
 Visualization of DBSCAN for different distributions of data:  
 
@@ -112,6 +122,7 @@ Dataset is of High Dimensionality
 Consensus Clustering would handle these DBSCAN concerns very well since BIRCH and Manifold Learning both are resilient to noisy data hence the final consensus cluster formed will prevent unwanted clustering of noisy points to non noisy ones. Manifold Learning works the best with higher dimensional data hence during consensus this drawback is also resolved.
 
 **Balanced Iterative Reducing and Clustering using Hierarchies (BIRCH)**
+
 It is an unsupervised algorithm used to perform hierarchical clustering over particularly large data-sets. Every new sample is inserted into the root of the Clustering Feature(CF) Tree. It is then clubbed together with the subcluster that has the centroid closest to the new sample. This is done recursively till it ends up at the subcluster of the leaf of the tree has the closest centroid. BIRCH Algorithm finds better accuracy results for finding noise than the other clustering algorithms for very large datasets.
 CF tree has two parameters
 **Branching Factor:** max number of children
@@ -131,6 +142,7 @@ BIRCH algorithm lacks in producing optimal results  when we have high dimensiona
 In order to deal with it Manifold Learning will be helpful thus in Consensus clustering the final cluster will be able to deal with high dimensional data. 
 
 **Manifold Learning**
+
 It is an unsupervised learning approach for dimensionality reduction. High-dimensional datasets can be very difficult to visualize. While data in two or three dimensions can be plotted to show the inherent structure of the data, equivalent high-dimensional plots are much less intuitive. To aid visualization of the structure of a dataset, the dimension must be reduced in some way. Isomap [9] and Locally Linear Embedding (LLE) [9] algorithms are used for Manifold Learning.
 The simplest way to accomplish this dimensionality reduction is by taking a random projection of the data. Though this allows some degree of visualization of the data structure, the randomness of the choice leaves much to be desired. In a random projection, it is likely that the more interesting structure within the data will be lost.
 Manifold Learning can be thought of as an attempt to generalize linear frameworks like PCA to be sensitive to nonlinear structure in data. Though supervised variants exist, the typical manifold learning problem is unsupervised: it learns the high-dimensional structure of the data from the data itself, without the use of predetermined classifications.
@@ -138,6 +150,7 @@ Manifold Learning can be thought of as an attempt to generalize linear framework
 DBSCAN and BIRCH lacks in giving optimized results for noise detection when it comes to data set with high dimensionality. Hence this when Manifold learning will come in handy in consensus clustering. Manifold Learning is an effective outlier detection algorithm for high-dimensional data.The algorithm is also applicable to both linear and nonlinear models of data.
 
 **Evaluation Criteria** 
+
 An extremely important issue in cluster analysis is the validation of the clustering results, that is, how to gain confidence about the significance of the clusters provided by the clustering technique (cluster numbers and cluster assignments). Lacking an external objective criterion (the equivalent of a known class label in supervised analysis), this validation becomes somewhat elusive.
 Recently, a number of studies have attempted to compare and validate cluster method consistency. Cluster validation can be split into two main procedures: internal validation, involving the use of information contained within the given dataset to assess the validity of the clusters; or external validation, based on assessing cluster results relative to another data source, for example, gene function annotation. Internal validation methods include comparing a number of clustering algorithms based upon a figure of merit (FOM) metric, which rates the predictive power of a clustering arrangement using a leave-one-out technique [4]. This and other metrics for assessing agreement between two data partitions [5, 6] readily show the different levels of cluster method disagreement. 
 In addition, when the FOM metric was used with an external cluster validity measure, similar inconsistencies are observed [7]. In addition to evaluate a clustering based on how well it combines multiple clusterings in the ensemble, there are also two additional clustering criteria to measure how well a clustering partitions the data into its natural groupings. As suggested by Nam Nguyen Rich Caruana [8]  to evaluate the clusters i will be using Compactness and Accuracy as formulated below.
@@ -182,6 +195,7 @@ Semi supervised Learning (Model B): **31 July**
 Within this period i will keep myself in constant touch with my mentors. This will involve discussing some aspects regarding the project, optimization techniques etc. so as to get a better hold over the project as well as strengthen acquaintance  among myself and the mentors. During this period the pros and cons of the both the proposed models will also be discussed. The timeline below is designed such that that implementation of both the models can take place.
 
 [Phases written below marked with asterisk(*) are part of the deliverables]
+
 Week Phase      |            TASK
 ----------------|--------------------------------------
 23 May - 30 May |Model A: Implementation using Algorithm 1 (DBSCAN), evaluating/testing its behavior on the dataset and parameter tuning to get best set of parameters
