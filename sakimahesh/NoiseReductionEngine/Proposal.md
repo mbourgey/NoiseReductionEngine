@@ -9,7 +9,7 @@ https://bitbucket.org/mugqic/gsoc2016#markdown-header-develop-a-noise-reduction-
 
  Biographical Information
 -----------------------------------
-I am Saket Maheshwary, 2nd year MS by Research CSE student at IIIT,Hyderabad. I am pursuing my Masters specializing in Data Mining and Machine Learning with the aim of pursuing my career as a Data Scientist. I am pursuing my Research in the area of Machine Learning and Data Mining under the guidance of Dr. Vikram Pudi. I have done more than 5 projects involving Data Mining, Machine learning and Statistics. I am working as a Research Assistant on a project http://metabolomics.iiit.ac.in/ where i have written R and Python scripts for statistical analysis and visualization of metabolomics data.
+I am Saket Maheshwary, 2nd year MS by Research CSE student at IIIT,Hyderabad. I am pursuing my Masters specializing in Data Mining and Machine Learning with the aim of pursuing my career as a Data Scientist. I am pursuing my Research in the area of Machine Learning and Data Mining under the guidance of Dr. Vikram Pudi. I have done more than 5 projects involving Data Mining, Machine learning and Statistics. I am working as a Research Assistant on a project http://metabolomics.iiit.ac.in/ where I have written R and Python scripts for statistical analysis and visualization of metabolomics data.
 I have written more than 15K lines of code in Python and more than 5K lines of code in R and is well versed with their inbuilt libraries used for Machine Learning. I find "Develop a noise reduction engine for SCoNEs" project idea to be interesting and quite aligned with my research areas.
 
 **Publications**
@@ -56,16 +56,17 @@ Mentors
 
 *Mentor link_ids:*
 
-I have exchanged multiple emails with my mentors where besides discussing my approach on selection test we also discussed the possible optimizations that can be incorporated, nature of dataset i will be working on during GSoC, discussed on manually labeling some corpus of data set and then generating the label for rest of the unlabeled data using the manually labeled data.
+I have exchanged multiple emails with my mentors where besides discussing my approach on selection test we also discussed the possible optimizations that can be incorporated, nature of dataset I will be working on during GSoC, discussed on manually labeling some corpus of data set and then generating the label for rest of the unlabeled data using the manually labeled data.
 
 Synopsis 
 ------------
-SCoNEs is a development tools in R language which aims to call Copy Number Variation in paired cancer data using a Read Depth (RD) approach. The specificity of SCoNEs is to incorporate the individual (biological) variations of the RD signal in order to adjust the set of parameter used by the calling algorithm. This approach can suffers from the presence of a technical noise in the signal that could in a certain case lead to overfitting of the RD signal. In this application i propose two machine learning models *Consensus Clustering* and *Semi Supervised Ensemble* respectively that would prevent overfitting, detect and remove noisy data in an efficient manner.
+SCoNEs is a development tools in R language which aims to call Copy Number Variation in paired cancer data using a Read Depth (RD) approach. The specificity of SCoNEs is to incorporate the individual (biological) variations of the RD signal in order to adjust the set of parameter used by the calling algorithm. This approach can suffers from the presence of a technical noise in the signal that could in a certain case lead to overfitting of the RD signal. In this application I propose two machine learning models *Consensus Clustering* and *Semi Supervised Ensemble* respectively that would prevent overfitting, detect and remove noisy data in an efficient manner.
 
 Benefits to Community 
 ------------------------------
-My work will involve techniques of Machine Learning and Data Mining in order to remove the presences of technical noise from Cancer Data. Hence with reduced noise the biologists working on cancer data will be able to make predictions with improved accuracy which may lead to some new insights in the domain dealing with Cancer Data. So i can say that these insights may lead to new discoveries hence affecting the lives of many people. I will produced reusable and scalable code that may help other open source organizations and researchers working in different domains to enhance their prediction and analysis.
-A detailed report with both raw data and graphical visualizations will be made at the end that will show what improvements are made before and after the techniques are implemented as a part of developing a noise reduction engine for SCoNEs.
+Cancer is one of the most common diseases in the developed world. Actually 3 out of 10 deaths are due to cancer. Lung cancer is the most common cancer in men whereas breast cancer is the most common in women. There are over 100 different forms of known cancer. Cancer, in general, are genetic diseases charaterised by an increase of genomic variations. Among this variations, Copy Number Variation (CNV) have a major impact on the cell integrity and the cancer development. Inmproving the detection and the understanding of CNV can thus have major important impact on human health. 
+My work will involve techniques of Machine Learning and Data Mining in order to remove the presences of technical noise from Cancer Data. Hence with reduced noise the biologists working on cancer data will be able to make predictions with improved accuracy which may lead to some new insights in this domain. 
+Additionally, I will produced reusable and scalable code that may help other open source organizations and researchers working in different domains to enhance their prediction and analysis. A detailed report with both raw data and graphical visualizations will be made at the end that will show what improvements are made before and after the techniques are implemented as a part of developing a noise reduction engine for SCoNEs.
 
 Coding Plan & Methods
 --------------------------------
@@ -77,9 +78,9 @@ Consensus clustering, also called aggregation of clustering (partitioning), refe
 **Concerns in individual algorithms**
 
 (i) How to determine the number of clusters (number of Gaussians)
-(ii) How to assign confidence to the selected number of clusters, as well as to the induced cluster assignments. This issue is particularly important in gene expression data analysis, where the problem of a relatively small sample size is compounded by the very high dimensionality of the data available, making the clustering results especially sensitive to outliers and susceptible to overfitting 
+(ii) How to assign confidence to the selected number of clusters, as well as to the induced cluster assignments. This issue is particularly important in CNV data analysis, where the problem of a relatively small sample size is compounded by the very high dimensionality of the data available, making the clustering results especially sensitive to outliers and susceptible to overfitting 
 (iii) Sensitivity to Noise and Outliers
-Keeping in mind the above mentioned concerns i have chosen such algorithms which is resilient for at least two of the above concerns such that resilient to noise and outliers is shown by all the three algorithms. All these algorithms compliments each other's strengths and tackle the weakness of either of any.Thus to get the optimal results for consensus i will be using 
+Keeping in mind the above mentioned concerns I have chosen such algorithms which is resilient for at least two of the above concerns such that resilient to noise and outliers is shown by all the three algorithms. All these algorithms compliments each other's strengths and tackle the weakness of either of any.Thus to get the optimal results for consensus i will be using 
 **DBSCAN, BIRCH** and **Manifold Learning**
 
 **Why use consensus clustering ?**
@@ -206,7 +207,7 @@ Semi supervised Learning (Model B): **31 July**
 
 **Community Bonding Period** 
 
-Within this period i will keep myself in constant touch with my mentors. This will involve discussing some aspects regarding the project, optimization techniques etc. so as to get a better hold over the project as well as strengthen acquaintance  among myself and the mentors. During this period the pros and cons of the both the proposed models will also be discussed. The timeline below is designed such that that implementation of both the models can take place.
+Within this period I will keep myself in constant touch with my mentors. This will involve discussing some aspects regarding the project, optimization techniques etc. so as to get a better hold over the project as well as strengthen acquaintance  among myself and the mentors. During this period the pros and cons of the both the proposed models will also be discussed. The timeline below is designed such that that implementation of both the models can take place.
 
 [Phases written below marked with asterisk(*) are part of the deliverables]
 
