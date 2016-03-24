@@ -106,6 +106,7 @@ The algorithm has three parameters:
 **Distance Function:** Euclidean distance metric is set by default but it can be customized for different datasets to get best possible results.
 
 Using these three parameters, DBSCAN categories the data points into three categories:
+
 **Core Points:** A data point p is a core point if Nbhd(p,ɛ) [ɛ-neighborhood of p] contains at least minPts ; |Nbhd(p,ɛ)| >= minPts.
 **Border Points:** A data point q is a border point if Nbhd(q, ɛ) contains less than minPts data points, but q is reachable from some core point p.
 **Outlier:** A data point o is an outlier if it is neither a core point nor a border point.
@@ -129,6 +130,7 @@ Consensus Clustering would handle these DBSCAN concerns very well since BIRCH an
 
 It is an unsupervised algorithm used to perform hierarchical clustering over particularly large data-sets. Every new sample is inserted into the root of the Clustering Feature(CF) Tree. It is then clubbed together with the subcluster that has the centroid closest to the new sample. This is done recursively till it ends up at the subcluster of the leaf of the tree has the closest centroid. BIRCH Algorithm finds better accuracy results for finding noise than the other clustering algorithms for very large datasets.
 CF tree has two parameters
+
 **Branching Factor:** max number of children
 **Threshold:** max diameter of sub-clusters stored at the leaf nodes
 BIRCH consists of four phases  (1)  Loading,  (2) Optional  Condensing,  (3)  Global Clustering  and  (4)  Optional  Refining. 
@@ -253,6 +255,8 @@ Link to selection test solution:
 https://github.com/sakimahesh/NoiseReductionEngine
 
 The above link contains the source code, data plots, output file and brief description about the results achieved.
+
+**Looking forward to work with and contribute to Canadian Centre for Computational Genomics (C3G) - Montreal node as a part of GSoC 2016 and beyond.**
 
 References
 ---------------
