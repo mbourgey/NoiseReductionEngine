@@ -60,7 +60,7 @@ I have exchanged multiple emails with my mentors where besides discussing my app
 
 Synopsis 
 ------------
-SCoNEs is a development tools in R language which aims to call Copy Number Variation in paired cancer data using a Read Depth (RD) approach. The specificity of SCoNEs is to incorporate the individual (biological) variations of the RD signal in order to adjust the set of parameter used by the calling algorithm. This approach can suffers from the presence of a technical noise in the signal that could in a certain case lead to overfitting of the RD signal. In this application i propose two machine learning models Consensus Clustering and Semi Supervised Ensemble respectively that would prevent overfitting, detect and remove noisy data in an efficient manner.
+SCoNEs is a development tools in R language which aims to call Copy Number Variation in paired cancer data using a Read Depth (RD) approach. The specificity of SCoNEs is to incorporate the individual (biological) variations of the RD signal in order to adjust the set of parameter used by the calling algorithm. This approach can suffers from the presence of a technical noise in the signal that could in a certain case lead to overfitting of the RD signal. In this application i propose two machine learning models *Consensus Clustering* and *Semi Supervised Ensemble* respectively that would prevent overfitting, detect and remove noisy data in an efficient manner.
 
 Benefits to Community 
 ------------------------------
@@ -69,15 +69,17 @@ A detailed report with both raw data and graphical visualizations will be made a
 
 Coding Plan & Methods
 --------------------------------
+
 Model A:  Consensus Clustering (Ensemble for Unsupervised Learning)
 -------------------------------------------------------------
 Consensus clustering, also called aggregation of clustering (partitioning), refers to the situation in which a number of different (input) clusterings have been obtained for a particular dataset and it is desired to find a single (consensus) clustering which is a better fit than the existing clusterings. It formalizes the idea that combining different clusterings into a single representative, or consensus, would emphasize the common organization in the different data sets and reveal the significant differences between them. Consensus clustering is thus the problem of reconciling clustering information about the same data set coming from different sources or from different runs of the same algorithm. It has been shown that consensus clustering is able to claim apparent stability than what is achieved by individual clusters.
+
 **Concerns in individual algorithms**
+
 (i) How to determine the number of clusters (number of Gaussians)
 (ii) How to assign confidence to the selected number of clusters, as well as to the induced cluster assignments. This issue is particularly important in gene expression data analysis, where the problem of a relatively small sample size is compounded by the very high dimensionality of the data available, making the clustering results especially sensitive to outliers and susceptible to overfitting 
 (iii) Sensitivity to Noise and Outliers
-Keeping in mind the above mentioned concerns i have chosen such algorithms which is resilient for at least two of the above concerns such that resilient to noise and outliers is shown by all the three algorithms. All these algorithms compliments each other's strengths and tackle the weakness of either of any.
-Thus to get the optimal results for consensus i will be using 
+Keeping in mind the above mentioned concerns i have chosen such algorithms which is resilient for at least two of the above concerns such that resilient to noise and outliers is shown by all the three algorithms. All these algorithms compliments each other's strengths and tackle the weakness of either of any.Thus to get the optimal results for consensus i will be using 
 **DBSCAN, BIRCH** and **Manifold Learning**
 
 **Why use consensus clustering ?**
@@ -94,9 +96,11 @@ Thus to get the optimal results for consensus i will be using
 **DBSCAN**
 
 DBSCAN is a density based clustering algorithm[1] where given a set of points in some space, it groups together points that are closely packed together (points with many nearby neighbors) thus marking as outliers points that lie alone in low-density regions (points whose nearest neighbors are too far away).
-Visualization of DBSCAN for different distributions of data:  
+
+Visualization of DBSCAN for different distributions of data:  www.naftaliharris.com/blog/visualizing-dbscan-clustering/
 
 The algorithm has three parameters:
+
 **ɛ(eps):** The radius of our neighborhoods around a data point (p or q). It is fundamental to DBSCAN to approximate local density.
 **minPts:** The minimum number of data points we want in a neighborhood to define a cluster.
 **Distance Function:** Euclidean distance metric is set by default but it can be customized for different datasets to get best possible results.
@@ -157,6 +161,7 @@ In addition, when the FOM metric was used with an external cluster validity meas
 
 ![enter image description here](https://github.com/sakimahesh/NoiseReductionEngine/blob/master/Screenshot%20from%202016-03-23%2003:09:50.png?raw=true)
 
+
 Model B: Semi-Supervised Ensemble Learning
 --------------------------------------------------------------
 
@@ -165,6 +170,7 @@ Ensemble learning has been widely used in machine learning, data mining and patt
 The approach is divided into following two steps 
 
 **Step 1 : Label Propagation**
+
 It assumes that each data point can be linearly constructed from its neighborhood. It can propagate the labels from the labeled points to the whole dataset using linear neighborhoods with sufficient smoothness. Thus as shown in figure 2 in step 1 the labeled data and unlabeled data are passed through label propagation algorithm and gives us a labeled dataset.
 
 ![enter image description here](https://github.com/sakimahesh/NoiseReductionEngine/blob/master/Unsupervised.png?raw=true)
@@ -172,6 +178,7 @@ It assumes that each data point can be linearly constructed from its neighborhoo
           Figure 2: Label Propagation (Step 1)
 
 **Step 2: Ensemble Learning**
+
 Ensembling is a general term for combining many classifiers by averaging or voting. It is a form of meta learning which focuses on how to merge results of arbitrary underlying classifiers. Generally, ensembles of classifiers perform better than single classifiers, and the averaging process allows for more granularity of choice in the bias-variance tradeoff.
 Names of ensemble techniques include bagging, boosting, model averaging, and weak learner theory. I will be experimenting during the Community Bonding period as to which technique works the best.The step 2 is demonstrated in figure 3 shown below. 
 
@@ -180,18 +187,23 @@ Names of ensemble techniques include bagging, boosting, model averaging, and wea
     Figure 3:Ensemble Learning on Labeled data (Step-2)
 
 **Choice of Classifiers**
+
 An obvious strategy is thus to implement as many different classifiers as possible and ensemble them all together, a sort of "More Models are Better" approach. However, reports suggest that this is not always the case. Sometimes adding more solvers results in no improvement at all, and can even make things worse. Thus choosing the best combination of classifiers will require experimentation and i will be performing during the community bonding period.Though some of the classifiers i am planning to experiment with are *k-nearest neighbor, Naive Bayes, Perceptron, SVM, Decision Trees are Neural Networks.*
 
 **Evaluation Criteria**
+
 After either of bagging, boosting, model averaging, and weak learner theory, we will get the predicted label. In order to evaluate the model it  will be divided into training, testing and validation (80/10/10 rule) and k-fold cross validation will be performed in order to prevent overfitting. There are many metrics that can be used to measure the performance of a classifier or predictor different fields have different preferences for specific metrics due to different goals. I will be measuring the performance in terms of precision, recall and f1-score. Confusion Matrix and ROC curve are other popular techniques to assess the performance that could be used.
 
 Timeline
 ------------
 **Expected Deliverables**
+
 Consensus Clustering (Model A): **26 June**
+
 Semi supervised Learning (Model B): **31 July**
 
 **Community Bonding Period** 
+
 Within this period i will keep myself in constant touch with my mentors. This will involve discussing some aspects regarding the project, optimization techniques etc. so as to get a better hold over the project as well as strengthen acquaintance  among myself and the mentors. During this period the pros and cons of the both the proposed models will also be discussed. The timeline below is designed such that that implementation of both the models can take place.
 
 [Phases written below marked with asterisk(*) are part of the deliverables]
@@ -216,6 +228,7 @@ Week Phase      |            TASK
 It will be observed that all the code is written concerning modularity, naming convention and other coding standards. Also, code will be produced with consideration of reusability and scalability since the solution on successful completion will prove useful for other research works as well.
 
 *What is your contingency plan for things not going to schedule?*
+
 I will try to keep a sufficient time period between the mid term evaluation and final evaluation such that if any unforeseen situation comes into picture i am able to handle it. Besides this i will make use of Community bonding period in order discuss with my mentor about such scenarios and will keep myself flexible enough to deal with such scenarios.
 
 Management of Coding Project
@@ -224,6 +237,7 @@ How do you propose to ensure code is submitted / tested?
 Regarding track of implementation of project, i am planning to use bitbucket which would consist of weekly progress, updates regarding implementation, feature requests, bug reports and other project management tasks. Also i am open to any other alternatives from the mentor.
 
 *How often do you plan to commit? What changes in commit behavior would indicate a problem?*
+
 I am planning to commit weekly. Multiple editings on the already pushed commits or no commit in more than two weeks may be a sign of problem.I will try communicating with the mentor twice a week to make sure that i am progressing in the right direction. Preferred mode of communication is via Skype or Google Hangouts apart from Mailing List and emails. Having said that i believe providing support for a module is as important as developing it. I will be in touch with the community and the mentors post GSoC period too. Suggestions, feedbacks, bug reporting would be most welcome and would be accounted for necessary changes by me.
 
 Test
@@ -231,10 +245,13 @@ Test
 I used DBSCAN in order to build a basic function in R language for noise detection engine as a part of selection test.
 
 Details about approach used: 
+
 https://docs.google.com/document/d/1Xqv_UuDJZcHPEKF6OC8bM3iQDE-IjfEeLGCrqEQMHG4/edit
 
 Link to selection test solution: 
+
 https://github.com/sakimahesh/NoiseReductionEngine
+
 The above link contains the source code, data plots, output file and brief description about the results achieved.
 
 References
