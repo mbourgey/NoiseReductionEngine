@@ -1,7 +1,9 @@
 Project Info
 ---------------
 *Project title:* Develop a noise reduction engine for SCoNEs
+
 *Project short title:* Noise Reduction Engine
+
 *URL of Project Idea Page:*
 https://bitbucket.org/mugqic/gsoc2016#markdown-header-develop-a-noise-reduction-engine-for-scones
 
@@ -9,15 +11,19 @@ https://bitbucket.org/mugqic/gsoc2016#markdown-header-develop-a-noise-reduction-
 -----------------------------------
 I am Saket Maheshwary, 2nd year MS by Research CSE student at IIIT,Hyderabad. I am pursuing my Masters specializing in Data Mining and Machine Learning with the aim of pursuing my career as a Data Scientist. I am pursuing my Research in the area of Machine Learning and Data Mining under the guidance of Dr. Vikram Pudi. I have done more than 5 projects involving Data Mining, Machine learning and Statistics. I am working as a Research Assistant on a project http://metabolomics.iiit.ac.in/ where i have written R and Python scripts for statistical analysis and visualization of metabolomics data.
 I have written more than 15K lines of code in Python and more than 5K lines of code in R and is well versed with their inbuilt libraries used for Machine Learning. I find "Develop a noise reduction engine for SCoNEs" project idea to be interesting and quite aligned with my research areas.
+
 **Publications**
+
 **User Authentication via Keystroke Timing Pattern** (under review)
 *Principles and Practice of Knowledge Discovery (PKDD), Italy 2016*
+
 **Mining Deceptive Reviewers on Web Forums** (under review) 
 *European Conference on Artificial Intelligence (ECAI), Holland 2016*
 
 Contact Information
 ---------------------------
 *Student name:* Saket Maheshwary
+
 *Melange Link_id:*
 *Student postal address:* 71 Green Avenue, Amritsar, Punjab,India (143001)
 *Telephone(s):* +91 8978889210, +91 9779399846
